@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Hokm Haghighat</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Vazirmatn', 'sans-serif'],
+            },
+            colors: {
+              felt: '#1a472a',
+              feltDark: '#0d2b18',
+              cardRed: '#d92b2b',
+              cardBlack: '#1a1a1a',
+              gold: '#ffd700',
+            },
+            animation: {
+              'deal-card': 'deal 0.5s ease-out forwards',
+              'flip': 'flip 0.6s ease-in-out',
+            },
+            keyframes: {
+              deal: {
+                '0%': { transform: 'translate(0, 0) scale(0.5)', opacity: 0 },
+                '100%': { transform: 'translate(var(--tx), var(--ty)) scale(1)', opacity: 1 },
+              },
+              flip: {
+                '0%': { transform: 'rotateY(0deg)' },
+                '100%': { transform: 'rotateY(180deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    
+    <!-- Import Map for React & Firebase -->
+    <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js",
+    "firebase/database": "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js",
+    "firebase/": "https://esm.sh/firebase@^12.7.0/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
